@@ -28,7 +28,7 @@ scores :: Record -> [Int]
 scores (_, score1, score2, score3) = [score1, score2, score3]
 
 averageScore :: Record -> Int
-averageScore (_, score1, score2, score3) = (score1 + score2 + score3) `div` 3
+averageScore r =  foldl (+) 0 (scores r) `div` 3
 
 ----------------------------------------------------------------------
 -- Part B: Filtering and simple data types
@@ -52,10 +52,10 @@ report cutoff recordList = [(name, status cutoff (name, s1, s2, s3)) | (name, s1
 ----------------------------------------------------------------------
 
 totalScore :: Record -> Int
-totalScore (_, s1, s2, s3) = s1 + s2 + s3
+totalScore r = sum (scores r)
 
 bestRecord :: [Record] -> Record
-bestRecord = undefined
+bestRecord r = undefined
 
 removeOnce :: Record -> [Record] -> [Record]
 removeOnce = undefined

@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run FxCheck",
+            "request": "launch",
+            "mainClass": "FxCheck",
+            "vmArgs": "--module-path C:/Users/trecv/Downloads/openjfx-26_windows-x64_bin-sdk/javafx-sdk-26/lib --add-modules javafx.controls"
+        }
+    ]
+}
