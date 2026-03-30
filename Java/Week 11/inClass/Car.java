@@ -16,4 +16,9 @@ public class Car extends Vehicle {
     public void accelerate(int amount) {
         System.out.println("Car " + getId() + " accelerates by " + amount + " mph.");
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s, doors=%d", super.toString(), numDoors);
+    }
 }

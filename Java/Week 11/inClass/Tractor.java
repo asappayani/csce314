@@ -1,9 +1,9 @@
 public class Tractor extends Vehicle {
-    private int numDoors;
+    private int liftCap;
     
-    public Tractor(String make, String model, int year, int numDoors){
+    public Tractor(String make, String model, int year, int liftCap){
         super(make, model, year);
-        this.numDoors = numDoors;
+        this.liftCap = liftCap;
     }
 
     @Override
@@ -15,5 +15,10 @@ public class Tractor extends Vehicle {
     @Override
     public void accelerate(int amount) {
         System.out.println("Tractor " + getId() + " accelerates by " + amount + " mph.");
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s, liftCap=%d", super.toString(), liftCap);
     }
 }

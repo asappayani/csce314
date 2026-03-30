@@ -1,7 +1,7 @@
 public class Boat extends Vehicle {
-    private double numEngines;
+    private int numEngines;
     
-    public Boat(String make, String model, int year, double numEngines){
+    public Boat(String make, String model, int year, int numEngines){
         super(make, model, year);
         this.numEngines = numEngines;
     }
@@ -15,5 +15,10 @@ public class Boat extends Vehicle {
     @Override
     public void accelerate(int amount) {
         System.out.println("Boat " + getId() + " accelerates by " + amount + " knots.");
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s, numEngines=%d", super.toString(), numEngines);
     }
 }

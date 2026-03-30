@@ -47,12 +47,42 @@ public class Main {
                 int doors = Integer.parseInt(sc.nextLine().trim());
                 yield new Car(make, model, year, doors);
             }
-            case "boat" -> new Boat(make, model, year, 4.0);
-            case "truck" -> new Truck(make, model, year, 3);
-            case "motorcycle" -> new Motorcycle(make, model, year, 650);
-            case "tractor" -> new Tractor(make, model, year, 120);
-            case "jetski" -> new Jetski(make, model, year, 2);
-            case "airplane" -> new Airplane(make, model, year, 2);
+
+            case "boat" -> {
+                System.out.print("Num engines: ");
+                int doors = Integer.parseInt(sc.nextLine().trim());
+                yield new Boat(make, model, year, doors);
+            }
+
+            case "truck" -> {
+                System.out.print("Num doors: ");
+                int doors = Integer.parseInt(sc.nextLine().trim());
+                yield new Truck(make, model, year, doors);
+            } 
+
+            case "motorcycle" -> {
+                System.out.print("CC: ");
+                int cc = Integer.parseInt(sc.nextLine().trim());
+                yield new Motorcycle(make, model, year, cc);
+            } 
+
+            case "tractor" -> {
+                System.out.print("Lift Capacity: ");
+                int liftCapacity = Integer.parseInt(sc.nextLine().trim());
+                yield new Tractor(make, model, year, liftCapacity);
+            }
+
+            case "jetski" -> {
+                System.out.print("Happiness: ");
+                int happy = Integer.parseInt(sc.nextLine().trim());
+                yield new Jetski(make, model, year, happy);
+            }
+
+            case "airplane" -> {
+                System.out.print("Passengers: ");
+                int passengers = Integer.parseInt(sc.nextLine().trim());
+                yield new Airplane(make, model, year, passengers);
+            } 
             default -> null;
             };
 

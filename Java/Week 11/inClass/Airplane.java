@@ -16,4 +16,9 @@ public class Airplane extends Vehicle {
     public void accelerate(int amount) {
         System.out.println("Airplane " + getId() + " accelerates by " + amount + " mph.");
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s, passengers=%d", super.toString(), numDoors);
+    }
 }

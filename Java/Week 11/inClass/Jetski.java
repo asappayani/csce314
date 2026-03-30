@@ -16,4 +16,9 @@ public class Jetski extends Vehicle {
     public void accelerate(int amount) {
         System.out.println("Jetski " + getId() + " accelerates by " + amount + " mph.");
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s, happiness=%d", super.toString(), numDoors);
+    }
 }
