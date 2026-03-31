@@ -41,7 +41,9 @@ public final class MyMath {
         total++; { boolean ok = Math.abs(MyMath.add(2, 3) - 5.0) < 1e-9; check.accept(ok, "add(int,int)"); if (ok) passed++; }
         total++; { boolean ok = Math.abs(MyMath.add(2.5, 0.5) - 3.0) < 1e-9; check.accept(ok, "add(double,double)"); if (ok) passed++; }
         total++; { boolean ok = Math.abs(MyMath.subtract(10L, 3L) - 7.0) < 1e-9; check.accept(ok, "subtract(long,long)"); if (ok) passed++; }
+        total++; { boolean ok = Math.abs(MyMath.subtract(10f, 9L) - 1.0) < 1e-9; check.accept(ok, "subtract(float,long)"); if (ok) passed++; }
         total++; { boolean ok = Math.abs(MyMath.multiply(1.5f, 2.0f) - 3.0) < 1e-9; check.accept(ok, "multiply(float,float)"); if (ok) passed++; }
+        total++; { boolean ok = Math.abs(MyMath.multiply(3.0, 2.0f) - 6.0) < 1e-9; check.accept(ok, "multiply(double,float)"); if (ok) passed++; }
 
         try {
             total++;
