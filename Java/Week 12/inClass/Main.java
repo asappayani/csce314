@@ -26,30 +26,17 @@ public class Main {
             showMenu();
             String choice = prompt("Choice: ");
             switch (choice) {
-                case "1":
-                    handleAdd(store);
-                    break;
-                case "2":
-                    handleListAll(store);
-                    break;
-                case "3":
-                    handlePrefix(store);
-                    break;
-                case "4":
-                    handleGet(store);
-                    break;
-                case "5":
-                    handleRemove(store);
-                    break;
-                case "6":
-                    println("Total contacts: " + store.count());
-                    break;
-                case "0":
+                case "1" -> handleAdd(store);
+                case "2" -> handleListAll(store);
+                case "3" -> handlePrefix(store);
+                case "4" -> handleGet(store);
+                case "5" -> handleRemove(store);
+                case "6" -> println("Total contacts: " + store.count());
+                case "0" -> {
                     running = false;
                     println("Goodbye!");
-                    break;
-                default:
-                    println("Unknown option.");
+                }
+                default -> println("Unknown option.");
             }
         }
     }
