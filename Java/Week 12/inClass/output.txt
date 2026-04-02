@@ -1,0 +1,115 @@
+PS C:\Users\trecv\OneDrive\Desktop\CSCE314\Java\Week 12\inClass> java Main        
+Contact Manager (Map + Interface + Exception)
+
+1) Add contact
+2) List all
+3) Find by prefix
+4) Get by name
+5) Remove by name
+6) Count
+0) Quit
+Choice: 1
+Alice
+555-1111
+1
+Bob
+555-2222
+1
+Alice
+555-3333
+1
+
+555-0000
+2
+3
+A
+4
+Bob
+5
+Bob
+6
+Name: Phone: [OK] Added: Alice
+
+1) Add contact
+2) List all
+3) Find by prefix
+4) Get by name
+5) Remove by name
+6) Count
+0) Quit
+Choice: Name: Phone: [OK] Added: Bob
+
+1) Add contact
+2) List all
+3) Find by prefix
+4) Get by name
+5) Remove by name
+6) Count
+0) Quit
+Choice: Name: Phone: [ERROR] Contact already exists: Alice
+
+1) Add contact
+2) List all
+3) Find by prefix
+4) Get by name
+5) Remove by name
+6) Count
+0) Quit
+Choice: Name: Phone: [ERROR] java.lang.IllegalArgumentException: Your name and phone number cannot be blank.
+
+1) Add contact
+2) List all
+3) Find by prefix
+4) Get by name
+5) Remove by name
+6) Count
+0) Quit
+Choice: Bob -> 555-2222
+Alice -> 555-1111
+
+1) Add contact
+2) List all
+3) Find by prefix
+4) Get by name
+5) Remove by name
+6) Count
+0) Quit
+Choice: Prefix: Alice -> 555-1111
+
+1) Add contact
+2) List all
+3) Find by prefix
+4) Get by name
+5) Remove by name
+6) Count
+0) Quit
+Choice: Name: Bob -> 555-2222
+
+1) Add contact
+2) List all
+3) Find by prefix
+4) Get by name
+5) Remove by name
+6) Count
+0) Quit
+Choice: Name: [OK] Removed.
+
+1) Add contact
+2) List all
+3) Find by prefix
+4) Get by name
+5) Remove by name
+6) Count
+0) Quit
+Choice: Total contacts: 1
+
+1) Add contact
+2) List all
+3) Find by prefix
+4) Get by name
+5) Remove by name
+6) Count
+0) Quit
+Choice: 0
+Goodbye!
+PS C:\Users\trecv\OneDrive\Desktop\CSCE314\Java\Week 12\inClass>
