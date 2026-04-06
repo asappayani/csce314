@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DemoExceptions",
+            "request": "launch",
+            "mainClass": "DemoExceptions",
+            "projectName": "CSCE314_ba5b5f1a"
+        },
+        {
+            "type": "java",
             "name": "HelloWorld",
             "request": "launch",
             "mainClass": "HelloWorld",
