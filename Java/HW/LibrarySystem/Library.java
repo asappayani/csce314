@@ -43,6 +43,10 @@ public class Library {
         });
     }
 
+    public java.util.List<Patron> getPatrons() {
+        return patrons;
+    }
+
     public java.util.List<LibraryItem> getItems() { 
         return items; }
 }

@@ -1,0 +1,100 @@
+BOOK_ON_TAPE,Cracking the Coding Interview Vol 10,John Sonmez,808
+HARDBACK,Code Complete Vol 5,Gayle McDowell,163
+VIDEO,The Pragmatic Programmer Vol 2,113,PG
+BOOK_ON_TAPE,Data Structures and Algorithms Vol 8,Andrew Hunt,744
+HARDBACK,Introduction to Algorithms Vol 8,Brian Goetz,422
+PERIODICAL,Mastering Git Vol 3,Mar-2022
+PAPERBACK,The Pragmatic Programmer Vol 9,Martin Fowler,236
+PERIODICAL,Think Java Vol 7,Apr-2025
+BOOK_ON_TAPE,Think Java Vol 2,John Sonmez,345
+PAPERBACK,Refactoring Vol 4,Scott Chacon,277
+VIDEO,Clean Code Vol 3,62,G
+VIDEO,Learning Python Vol 3,79,PG
+BOOK_ON_TAPE,Think Java Vol 5,Gayle McDowell,808
+HARDBACK,Programming Pearls Vol 10,Thomas Cormen,535
+BOOK_ON_TAPE,Soft Skills Vol 8,Martin Fowler,801
+HARDBACK,Data Structures and Algorithms Vol 10,Joshua Bloch,450
+BOOK_ON_TAPE,Modern Operating Systems Vol 9,Thomas Cormen,579
+PERIODICAL,Head First Java Vol 3,Oct-2022
+PERIODICAL,Clean Code Vol 9,Nov-2024
+VIDEO,Artificial Intelligence Vol 8,82,G
+VIDEO,Cracking the Coding Interview Vol 5,96,G
+PAPERBACK,Code Complete Vol 10,Andrew Tanenbaum,577
+HARDBACK,Soft Skills Vol 4,Len Bass,361
+PAPERBACK,Introduction to Algorithms Vol 10,Kathy Sierra,539
+HARDBACK,Soft Skills Vol 2,Jon Bentley,591
+HARDBACK,Code Complete Vol 5,Kathy Sierra,224
+BOOK_ON_TAPE,Programming Pearls Vol 7,Brian Goetz,837
+BOOK_ON_TAPE,Design Patterns Vol 3,Mark Lutz,342
+VIDEO,Mastering Git Vol 9,76,G
+PERIODICAL,Mastering Git Vol 4,Jul-2025
+VIDEO,Effective Java Vol 6,84,PG
+HARDBACK,The Pragmatic Programmer Vol 3,Brian Goetz,261
+HARDBACK,The Pragmatic Programmer Vol 10,Robert C. Martin,376
+PERIODICAL,Effective Java Vol 8,Feb-2025
+PERIODICAL,Cracking the Coding Interview Vol 1,Nov-2024
+PERIODICAL,Modern Operating Systems Vol 2,Apr-2020
+PERIODICAL,Head First Java Vol 3,May-2025
+PAPERBACK,Introduction to Algorithms Vol 1,Scott Chacon,252
+BOOK_ON_TAPE,Think Java Vol 5,Andrew Hunt,819
+BOOK_ON_TAPE,Design Patterns Vol 4,Robert C. Martin,333
+PAPERBACK,Cracking the Coding Interview Vol 6,Robert C. Martin,301
+BOOK_ON_TAPE,Think Java Vol 2,Martin Fowler,768
+HARDBACK,Modern Operating Systems Vol 2,Kathy Sierra,470
+PERIODICAL,Computer Networks Vol 6,Nov-2023
+PAPERBACK,Clean Code Vol 6,Scott Chacon,510
+BOOK_ON_TAPE,Computer Networks Vol 1,Jon Bentley,326
+PAPERBACK,Computer Networks Vol 7,Martin Fowler,239
+PAPERBACK,Java Concurrency in Practice Vol 8,Jon Bentley,519
+PAPERBACK,Modern Operating Systems Vol 7,Allen Downey,237
+PAPERBACK,Learning Python Vol 8,Len Bass,460
+PAPERBACK,Learning Python Vol 5,Narasimha Karumanchi,369
+PAPERBACK,Cracking the Coding Interview Vol 5,Kathy Sierra,527
+BOOK_ON_TAPE,Computer Networks Vol 9,Gayle McDowell,430
+VIDEO,Java Concurrency in Practice Vol 7,122,G
+PAPERBACK,Software Architecture Vol 1,James Kurose,535
+PAPERBACK,Head First Java Vol 1,Martin Fowler,189
+PAPERBACK,Data Structures and Algorithms Vol 3,Erich Gamma,400
+HARDBACK,Refactoring Vol 2,Martin Fowler,393
+BOOK_ON_TAPE,Computer Networks Vol 9,Narasimha Karumanchi,408
+BOOK_ON_TAPE,Clean Code Vol 3,Stuart Russell,505
+PERIODICAL,Java Concurrency in Practice Vol 1,Jan-2020
+VIDEO,Cracking the Coding Interview Vol 9,179,PG
+HARDBACK,Modern Operating Systems Vol 6,Narasimha Karumanchi,175
+PAPERBACK,Soft Skills Vol 1,Erich Gamma,585
+PAPERBACK,Cracking the Coding Interview Vol 6,Steve McConnell,370
+HARDBACK,Cracking the Coding Interview Vol 10,Robert C. Martin,273
+BOOK_ON_TAPE,Effective Java Vol 3,Stuart Russell,634
+VIDEO,Software Architecture Vol 5,135,PG
+PAPERBACK,Soft Skills Vol 5,Stuart Russell,596
+HARDBACK,Modern Operating Systems Vol 9,Martin Fowler,540
+BOOK_ON_TAPE,Refactoring Vol 5,Joshua Bloch,888
+HARDBACK,Computer Networks Vol 6,Robert C. Martin,378
+BOOK_ON_TAPE,Mastering Git Vol 10,John Sonmez,322
+BOOK_ON_TAPE,Effective Java Vol 4,Jon Bentley,845
+BOOK_ON_TAPE,Design Patterns Vol 1,Jon Bentley,537
+HARDBACK,Software Architecture Vol 7,Gayle McDowell,313
+HARDBACK,Programming Pearls Vol 10,Narasimha Karumanchi,223
+BOOK_ON_TAPE,The Pragmatic Programmer Vol 6,Robert C. Martin,648
+PAPERBACK,Cracking the Coding Interview Vol 10,Steve McConnell,577
+VIDEO,Design Patterns Vol 6,157,G
+PAPERBACK,Mastering Git Vol 5,Scott Chacon,363
+PERIODICAL,Mastering Git Vol 10,Jun-2023
+PAPERBACK,Effective Java Vol 6,Robert C. Martin,337
+VIDEO,Think Java Vol 7,142,PG
+HARDBACK,Modern Operating Systems Vol 3,Scott Chacon,326
+BOOK_ON_TAPE,Refactoring Vol 6,Kathy Sierra,772
+HARDBACK,Effective Java Vol 2,Kathy Sierra,328
+VIDEO,Data Structures and Algorithms Vol 5,152,PG
+BOOK_ON_TAPE,Mastering Git Vol 1,Narasimha Karumanchi,531
+BOOK_ON_TAPE,Data Structures and Algorithms Vol 1,Brian Goetz,361
+PAPERBACK,Effective Java Vol 4,John Sonmez,392
+HARDBACK,Mastering Git Vol 9,Joshua Bloch,454
+BOOK_ON_TAPE,Clean Code Vol 9,Len Bass,337
+VIDEO,Learning Python Vol 1,69,PG
+PAPERBACK,Java Concurrency in Practice Vol 1,Erich Gamma,178
+VIDEO,Effective Java Vol 1,180,G
+BOOK_ON_TAPE,Software Architecture Vol 3,Gayle McDowell,643
+BOOK_ON_TAPE,Effective Java Vol 4,Len Bass,571
+BOOK_ON_TAPE,Refactoring Vol 3,Joshua Bloch,753
+PAPERBACK,Artificial Intelligence Vol 1,Andrew Hunt,586
