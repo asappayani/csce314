@@ -1,157 +1,77 @@
-import java.util.Scanner;
-
 public class ScoreboardTests {
 
-    private static void printMenu() {
-        System.out.println("\n=== Scoreboard CLI ===");
-        System.out.println("1) Show scoreboard");
-        System.out.println("2) Set home team name");
-        System.out.println("3) Set away team name");
-        System.out.println("4) Add home score");
-        System.out.println("5) Add away score");
-        System.out.println("6) Show last action");
-        System.out.println("7) Undo last action");
-        System.out.println("8) Clear scores");
-        System.out.println("9) Run edge-case diagnostics");
-        System.out.println("0) Exit");
-        System.out.print("Choose: ");
-    }
-
-    private static void showState(Team home, Team away, TeamManager teamManager, ScoreManager scoreManager) {
-        System.out.println("\n--- Current State ---");
-        System.out.println("Home: " + teamManager.getHomeTeamName() + " | Score: " + home.getScore());
-        System.out.println("Away: " + teamManager.getAwayTeamName() + " | Score: " + away.getScore());
-        System.out.println("Last Action: " + scoreManager.displayLastAction());
-    }
-
-    private static int readInt(Scanner sc, String prompt) {
-        while (true) {
-            System.out.print(prompt);
-            String line = sc.nextLine();
-            try {
-                return Integer.parseInt(line.trim());
-            } catch (NumberFormatException ex) {
-                System.out.println("Invalid number. Try again.");
+    // some of my model's methods throw errors, so this will make sure an error is thrown properly etc.
+    private static void assertThrows(Class<? extends Throwable> expected, Runnable action, String message) {
+        try {
+            action.run();
+            throw new AssertionError(message + " - expected " + expected.getSimpleName());
+        } catch (Throwable actual) {
+            if (!expected.isInstance(actual)) {
+                throw new AssertionError(
+                    message + " - expected " + expected.getSimpleName()
+                    + ", but got " + actual.getClass().getSimpleName()
+                );
             }
-        }
-    }
-
-    private static String readText(Scanner sc, String prompt) {
-        System.out.print(prompt);
-        return sc.nextLine();
-    }
-
-    private static void runDiagnostics(ScoreManager scoreManager) {
-        System.out.println("\nRunning diagnostics...");
-        System.out.println("1) Calling displayLastAction() before any scoring action.");
-        try {
-            String action = scoreManager.displayLastAction();
-            System.out.println("No error. Result: " + action);
-        } catch (Exception e) {
-            System.out.println("Caught error: " + e.getClass().getSimpleName() + " -> " + e.getMessage());
-        }
-
-        System.out.println("2) Calling undo() before any scoring action.");
-        try {
-            scoreManager.undo();
-            System.out.println("No error.");
-        } catch (Exception e) {
-            System.out.println("Caught error: " + e.getClass().getSimpleName() + " -> " + e.getMessage());
         }
     }
 
     public static void main(String[] args) {
-        Team home = new Team();
-        Team away = new Team();
+        try {
+            Team home = new Team();
+            Team away = new Team();
+            TeamManager teamManager = new TeamManager(home, away);
+            ScoreManager scoreManager = new ScoreManager(home, away);
 
-        TeamManager teamManager = new TeamManager(home, away);
-        ScoreManager scoreManager = new ScoreManager(home, away);
+            assert scoreManager.displayLastAction().equals("None")
+                : "Initial last action should be None";
 
-        Scanner sc = new Scanner(System.in);
-        boolean running = true;
+            assertThrows(IllegalStateException.class,
+                () -> scoreManager.updateHomeScore(6, "Touchdown"),
+                "Scoring before team names are set should fail"
+            );
 
-        System.out.println("Scoreboard CLI started.");
-        showState(home, away, teamManager, scoreManager);
+            assertThrows(IllegalStateException.class,
+                () -> scoreManager.undo(),
+                "Undo before any scoring action should fail"
+            );
 
-        while (running) {
-            printMenu();
-            int choice = readInt(sc, "");
+            teamManager.setHomeTeamName("Aggies");
+            teamManager.setAwayTeamName("Gamecocks");
 
-            try {
-                switch (choice) {
-                    case 1:
-                        showState(home, away, teamManager, scoreManager);
-                        break;
+            assert teamManager.getHomeTeamName().equals("Aggies")
+                : "Home team name should be Aggies";
+            assert teamManager.getAwayTeamName().equals("Gamecocks")
+                : "Away team name should be Gamecocks";
 
-                    case 2: {
-                        String name = readText(sc, "New home team name: ");
-                        teamManager.setHomeTeamName(name);
-                        System.out.println("Home team renamed.");
-                        showState(home, away, teamManager, scoreManager);
-                        break;
-                    }
+            scoreManager.updateHomeScore(6, "Touchdown");
+            assert home.getScore() == 6 : "Home score should be 6";
+            assert scoreManager.displayLastAction().equals("Aggies +6 (Touchdown)")
+                : "Last action should reflect the home score";
 
-                    case 3: {
-                        String name = readText(sc, "New away team name: ");
-                        teamManager.setAwayTeamName(name);
-                        System.out.println("Away team renamed.");
-                        showState(home, away, teamManager, scoreManager);
-                        break;
-                    }
+            scoreManager.updateAwayScore(3, "Field Goal");
+            assert away.getScore() == 3 : "Away score should be 3";
+            assert scoreManager.displayLastAction().equals("Gamecocks +3 (Field Goal)")
+                : "Last action should reflect the away score";
 
-                    case 4: {
-                        int points = readInt(sc, "Points to add to home: ");
-                        String type = readText(sc, "Score type label (e.g. TD, FG): ");
-                        scoreManager.updateHomeScore(points, type);
-                        System.out.println("Home score updated.");
-                        showState(home, away, teamManager, scoreManager);
-                        break;
-                    }
+            scoreManager.undo();
+            assert away.getScore() == 0 : "Undo should revert the away score";
+            assert scoreManager.displayLastAction().equals("Gamecocks +3 (Field Goal)")
+                : "Undo should not erase the last action text";
 
-                    case 5: {
-                        int points = readInt(sc, "Points to add to away: ");
-                        String type = readText(sc, "Score type label (e.g. TD, FG): ");
-                        scoreManager.updateAwayScore(points, type);
-                        System.out.println("Away score updated.");
-                        showState(home, away, teamManager, scoreManager);
-                        break;
-                    }
+            scoreManager.clear();
+            assert home.getScore() == 0 : "Home score should be cleared";
+            assert away.getScore() == 0 : "Away score should be cleared";
+            assert scoreManager.displayLastAction().equals("None")
+                : "Clear should reset last action to None";
 
-                    case 6:
-                        System.out.println("Last action: " + scoreManager.displayLastAction());
-                        break;
+            assertThrows(IllegalStateException.class,
+                () -> scoreManager.undo(),
+                "Undo after clear should fail when last action is null"
+            );
 
-                    case 7:
-                        scoreManager.undo();
-                        System.out.println("Undo attempted.");
-                        showState(home, away, teamManager, scoreManager);
-                        break;
-
-                    case 8:
-                        scoreManager.clear();
-                        System.out.println("Scores cleared.");
-                        showState(home, away, teamManager, scoreManager);
-                        break;
-
-                    case 9:
-                        runDiagnostics(scoreManager);
-                        break;
-
-                    case 0:
-                        running = false;
-                        break;
-
-                    default:
-                        System.out.println("Unknown option.");
-                }
-            } catch (IllegalStateException e) {
-                System.out.println("Validation error: " + e.getMessage());
-            } catch (Exception e) {
-                System.out.println("Operation failed: " + e.getClass().getSimpleName() + " -> " + e.getMessage());
-            }
+            System.out.println("All tests PASS");
+        } catch (Throwable t) {
+            System.out.println("FAIL: " + t.getMessage());
         }
-
-        sc.close();
-        System.out.println("CLI exited.");
     }
 }

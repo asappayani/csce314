@@ -59,5 +59,7 @@ public class ScoreManager {
     public void clear(){
         homeTeam.resetScore();
         awayTeam.resetScore();
+
+        lastTeam = null;
     }
 }
