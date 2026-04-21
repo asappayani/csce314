@@ -1,3 +1,5 @@
+package model;
+
 public class TeamManager {
     private final Team homeTeam;
     private final Team awayTeam;

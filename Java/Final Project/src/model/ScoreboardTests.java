@@ -1,3 +1,5 @@
+package model;
+
 public class ScoreboardTests {
 
     // some of my model's methods throw errors, so this will make sure an error is thrown properly etc.
