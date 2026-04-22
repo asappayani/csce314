@@ -20,7 +20,6 @@ public class App extends Application {
         TeamManager teamManager = new TeamManager(home, away);
         ScoreManager scoreManager = new ScoreManager(home, away);
 
-        // Load display first so manager can push updates to it
         FXMLLoader displayLoader = new FXMLLoader(getClass().getResource("/view/scoreboarddisplay.fxml"));
         Scene displayScene = new Scene(displayLoader.load());
         DisplayController displayController = displayLoader.getController();
@@ -30,7 +29,6 @@ public class App extends Application {
         Scene managerScene = new Scene(managerLoader.load());
         ScoreboardController managerController = managerLoader.getController();
 
-        // Inject shared model and cross-controller dependency
         displayController.init(home, away, scoreManager);
         managerController.init(home, away, teamManager, scoreManager, displayController);
 

@@ -50,6 +50,7 @@ public class ScoreboardController {
         refreshFromModel();
     }
 
+    // this'll allow me to update the view easily after every change by the user
     private void refreshFromModel() {
         homeTeamNamePreview.setText(safeName(homeTeam.getTeamName(), "HOME TEAM NAME"));
         awayTeamNamePreview.setText(safeName(awayTeam.getTeamName(), "AWAY TEAM NAME"));
@@ -59,6 +60,7 @@ public class ScoreboardController {
         displayController.refreshFromModel();
     }
 
+    // name validation
     private String safeName(String value, String fallback) {
         if (value == null || value.trim().isEmpty()) {
             return fallback;
@@ -76,6 +78,7 @@ public class ScoreboardController {
 }
 
     //thank god u showed us lambda functions b/c this made my code so much more readable instead of using a million try catches
+    //i was honestly gonna delete my thrown errors and find another way
     private void runAction(Runnable action) {
         try {
             action.run();
