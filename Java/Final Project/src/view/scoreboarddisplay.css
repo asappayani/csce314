@@ -1,0 +1,71 @@
+.root {
+	-fx-background-color: #0f1520;
+	-fx-font-family: "Bahnschrift";
+}
+
+.scoreboard-display-split,
+.home-team-info-pane,
+.game-info-pane,
+.away-team-info-pane {
+	-fx-background-color: transparent;
+}
+
+.scoreboard-display-split {
+	-fx-background-color: linear-gradient(to bottom, #0e131b, #0a0f16);
+}
+
+.scoreboard-display-split > .split-pane-divider {
+	-fx-background-color: #1a2330;
+	-fx-border-color: #263446;
+	-fx-border-width: 0 1 0 1;
+	-fx-padding: 0 1 0 1;
+}
+
+.top-strip {
+	-fx-background-color: #5b1f2a;
+	-fx-border-color: transparent transparent #263446 transparent;
+	-fx-border-width: 0 0 1 0;
+}
+
+.home-team-name,
+.away-team-name,
+.current-game-time,
+.current-game-quarter,
+.last-action {
+	-fx-text-fill: #f0f5ff;
+	-fx-font-family: "Bahnschrift";
+	-fx-font-size: 20px;
+	-fx-font-weight: 800;
+}
+
+.home-team-score-badge,
+.away-team-score-badge {
+	-fx-background-color: #202d40;
+	-fx-border-color: #33425a;
+	-fx-border-width: 3;
+	-fx-background-radius: 0;
+	-fx-border-radius: 0;
+}
+
+.game-time-badge,
+.last-action-badge {
+	-fx-background-color: #202d40;
+	-fx-border-color: #33425a;
+	-fx-border-width: 3;
+	-fx-background-radius: 0;
+	-fx-border-radius: 0;
+}
+
+.score-badge-value {
+	-fx-fill: #ecf2ff;
+	-fx-font-family: "Bahnschrift";
+	-fx-font-size: 86px;
+	-fx-font-weight: 800;
+}
+
+.game-time-value {
+	-fx-fill: #ecf2ff;
+	-fx-font-family: "Bahnschrift";
+	-fx-font-size: 64px;
+	-fx-font-weight: 800;
+}

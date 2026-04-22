@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1019.0" styleClass="root" stylesheets="@scoreboarddisplay.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DisplayController">
+   <children>
+      <SplitPane dividerPositions="0.33, 0.66" prefHeight="400.0" prefWidth="1019.0" styleClass="scoreboard-display-split" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane styleClass="home-team-info-pane">
+               <children>
+                  <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints fillWidth="true" hgrow="ALWAYS" percentWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints percentHeight="16.6667" />
+                        <RowConstraints percentHeight="8.3333" />
+                        <RowConstraints percentHeight="66.6667" />
+                     </rowConstraints>
+                     <children>
+                        <StackPane alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="top-strip">
+                           <children>
+                              <Label alignment="CENTER" styleClass="home-team-name" text="HOME TEAM NAME" />
+                           </children>
+                        </StackPane>
+                        <StackPane alignment="CENTER" GridPane.rowIndex="2">
+                           <children>
+                              <StackPane maxHeight="220.0" maxWidth="220.0" minHeight="220.0" minWidth="220.0" prefHeight="220.0" prefWidth="220.0" styleClass="home-team-score-badge">
+                                 <children>
+                                    <Text fx:id="homeTeamScoreLabel" styleClass="score-badge-value" text="0" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane styleClass="game-info-pane">
+               <children>
+                  <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints fillWidth="true" hgrow="ALWAYS" percentWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints percentHeight="16.6667" />
+                        <RowConstraints percentHeight="8.3333" />
+                        <RowConstraints percentHeight="66.6667" />
+                     </rowConstraints>
+                     <children>
+                        <StackPane alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="top-strip">
+                           <children>
+                              <Label alignment="CENTER" styleClass="current-game-quarter" text="QUARTER" />
+                           </children>
+                        </StackPane>
+                        <VBox alignment="CENTER" spacing="22.0" GridPane.rowIndex="2">
+                           <children>
+                              <StackPane maxHeight="145.0" maxWidth="230.0" minHeight="145.0" minWidth="230.0" prefHeight="145.0" prefWidth="230.0" styleClass="game-time-badge">
+                                 <children>
+                                    <Text fx:id="currentGameTimeLabel" styleClass="game-time-value" text="00:00" />
+                                 </children>
+                              </StackPane>
+                              <StackPane alignment="CENTER" maxHeight="60.0" maxWidth="230.0" minHeight="60.0" minWidth="230.0" prefHeight="60.0" prefWidth="230.0" styleClass="last-action-badge">
+                                 <children>
+                                    <Label alignment="CENTER" styleClass="last-action" text="LAST ACTION" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" styleClass="away-team-info-pane">
+               <children>
+                  <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints fillWidth="true" hgrow="ALWAYS" percentWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints percentHeight="16.6667" />
+                        <RowConstraints percentHeight="8.3333" />
+                        <RowConstraints percentHeight="66.6667" />
+                     </rowConstraints>
+                     <children>
+                        <StackPane alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="top-strip">
+                           <children>
+                              <Label alignment="CENTER" styleClass="away-team-name" text="AWAY TEAM NAME" />
+                           </children>
+                        </StackPane>
+                        <StackPane alignment="CENTER" GridPane.rowIndex="2">
+                           <children>
+                              <StackPane maxHeight="220.0" maxWidth="220.0" minHeight="220.0" minWidth="220.0" prefHeight="220.0" prefWidth="220.0" styleClass="away-team-score-badge">
+                                 <children>
+                                    <Text fx:id="awayTeamScoreLabel" styleClass="score-badge-value" text="0" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

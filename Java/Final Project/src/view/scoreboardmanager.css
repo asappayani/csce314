@@ -1,0 +1,254 @@
+.manager-main-split {
+	-fx-background-color: linear-gradient(to bottom, #0e131b, #0a0f16);
+	-fx-font-family: "Bahnschrift";
+}
+
+.manager-main-split > .split-pane-divider {
+	-fx-background-color: #1a2330;
+	-fx-border-color: #263446;
+	-fx-border-width: 0 1 0 1;
+	-fx-padding: 0 1 0 1;
+}
+
+.manager-controls-panel {
+	-fx-background-color: transparent;
+}
+
+.manager-controls-panel-split {
+	-fx-background-color: transparent;
+}
+
+.manager-controls-panel-split > .split-pane-divider {
+	-fx-background-color: #1d2735;
+	-fx-border-color: #29384d;
+	-fx-border-width: 1 0 1 0;
+	-fx-padding: 1 0 1 0;
+}
+
+.manager-controls-panel-split > .content {
+	-fx-background-color: #0f1520;
+}
+
+.home-controls-panel {
+	-fx-background-color: #141e2d;
+	-fx-background-radius: 14;
+	-fx-border-radius: 14;
+	-fx-border-color: #2f3d52;
+	-fx-border-width: 1;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.30), 14, 0.18, 0, 3);
+}
+
+.away-controls-panel {
+	-fx-background-color: #131c2a;
+	-fx-background-radius: 14;
+	-fx-border-radius: 14;
+	-fx-border-color: #2c3a4e;
+	-fx-border-width: 1;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.30), 14, 0.18, 0, 3);
+}
+
+.panel-title {
+	-fx-text-fill: #f4f8ff;
+	-fx-font-size: 24px;
+	-fx-font-family: "Bahnschrift";
+	-fx-font-weight: 800;
+	-fx-letter-spacing: 0.2px;
+}
+
+.home-controls-panel .label,
+.away-controls-panel .label {
+	-fx-text-fill: #cfd9ee;
+	-fx-font-family: "Bahnschrift";
+	-fx-font-size: 13px;
+	-fx-font-weight: 600;
+}
+
+/* Ensure the panel-title in the control panels matches preview boldness */
+.home-controls-panel .panel-title,
+.away-controls-panel .panel-title {
+	-fx-font-weight: 800;
+	-fx-font-size: 24px;
+	-fx-text-fill: #f4f8ff;
+}
+
+.setname-text-field {
+	-fx-background-color: #0b111b;
+	-fx-text-fill: #ecf2ff;
+	-fx-prompt-text-fill: #7d8aa3;
+	-fx-min-width: 125px;
+	-fx-background-radius: 10;
+	-fx-border-radius: 10;
+	-fx-border-color: #33425a;
+	-fx-border-width: 1;
+	-fx-font-family: "Bahnschrift";
+	-fx-font-size: 13px;
+	-fx-padding: 6 10 6 10;
+}
+
+.setname-text-field:focused {
+	-fx-border-color: #6da3ff;
+	-fx-effect: dropshadow(gaussian, rgba(109,163,255,0.30), 8, 0.25, 0, 0);
+}
+
+.setname-button {
+	-fx-background-color: linear-gradient(to bottom, #4e91ff, #3a76da);
+	-fx-text-fill: #f7fbff;
+	-fx-font-family: "Bahnschrift";
+	-fx-pref-width: 102px;
+	-fx-max-width: 102px;
+	-fx-font-size: 14px;
+	-fx-font-weight: 700;
+	-fx-padding: 7 12 7 12;
+	-fx-background-radius: 10;
+	-fx-border-radius: 10;
+	-fx-border-color: #6fa6ff;
+	-fx-border-width: 1;
+	-fx-cursor: hand;
+}
+
+.setname-button:hover {
+	-fx-background-color: linear-gradient(to bottom, #63a1ff, #4a84e5);
+}
+
+.setname-button:pressed {
+	-fx-background-color: linear-gradient(to bottom, #3d7de7, #336ccb);
+	-fx-translate-y: 1;
+}
+
+.setname-button:focused {
+	-fx-border-color: #99beff;
+	-fx-effect: dropshadow(gaussian, rgba(125,177,255,0.30), 8, 0.25, 0, 0);
+}
+
+.score-button {
+	-fx-background-color: #202d40;
+	-fx-text-fill: #eff4ff;
+	-fx-font-family: "Bahnschrift";
+	-fx-font-size: 14px;
+	-fx-font-weight: 700;
+	-fx-padding: 10 16 10 16;
+	-fx-background-radius: 10;
+	-fx-border-radius: 10;
+	-fx-border-color: #3a4b66;
+	-fx-border-width: 1;
+	-fx-cursor: hand;
+}
+
+.score-button:hover {
+	-fx-background-color: #28384f;
+	-fx-border-color: #506586;
+}
+
+.score-button:pressed {
+	-fx-background-color: #1a2638;
+	-fx-translate-y: 1;
+}
+
+.score-button:focused {
+	-fx-border-color: #88b5ff;
+	-fx-effect: dropshadow(gaussian, rgba(123,175,255,0.26), 8, 0.22, 0, 0);
+}
+
+.scoreboard-panel {
+	-fx-background-color: transparent;
+}
+
+.scoreboard-panel-split {
+	-fx-background-color: transparent;
+}
+
+.scoreboard-panel-split > .split-pane-divider {
+	-fx-background-color: #1d2735;
+	-fx-border-color: #29384d;
+	-fx-border-width: 1 0 1 0;
+	-fx-padding: 1 0 1 0;
+}
+
+.scoreboard-panel-split > .content {
+	-fx-background-color: #0f1520;
+}
+
+.scoreboard-preview-panel {
+	-fx-background-color: #141e2d;
+	-fx-background-radius: 14;
+	-fx-border-radius: 14;
+	-fx-border-color: #2f3d52;
+	-fx-border-width: 1;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.30), 14, 0.18, 0, 3);
+}
+
+.scoreboard-preview-panel .label {
+	-fx-text-fill: #cfd9ee;
+	-fx-font-family: "Bahnschrift";
+	-fx-font-size: 13px;
+	-fx-font-weight: 600;
+}
+
+.scoreboard-preview-panel .panel-title {
+	-fx-text-fill: #f4f8ff;
+	-fx-font-size: 24px;
+	-fx-font-weight: 800;
+}
+
+.hometeam-name-label,
+.awayteam-name-label {
+	-fx-text-fill: #f0f5ff;
+	-fx-font-size: 21px;
+	-fx-font-weight: 800;
+}
+
+.score-badge {
+	-fx-background-color: #202d40;
+	-fx-background-radius: 10;
+	-fx-border-radius: 10;
+	-fx-border-color: #33425a;
+	-fx-border-width: 1;
+}
+
+.score-badge-text {
+	-fx-fill: #ecf2ff;
+	-fx-font-family: "Bahnschrift";
+	-fx-font-size: 36px;
+	-fx-font-weight: 700;
+}
+
+.lastaction-label {
+	-fx-text-fill: #f6f9ff;
+	-fx-font-size: 18px;
+	-fx-font-weight: 700;
+}
+
+.game-control-panel {
+	-fx-background-color: #131c2a;
+	-fx-background-radius: 14;
+	-fx-border-radius: 14;
+	-fx-border-color: #2c3a4e;
+	-fx-border-width: 1;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.30), 14, 0.18, 0, 3);
+}
+
+.undo-button,
+.clear-game-button {
+	-fx-background-color: linear-gradient(to bottom, #4e91ff, #3a76da);
+	-fx-text-fill: #f7fbff;
+	-fx-font-family: "Bahnschrift";
+	-fx-font-size: 14px;
+	-fx-font-weight: 700;
+	-fx-padding: 9 16 9 16;
+	-fx-background-radius: 10;
+	-fx-border-radius: 10;
+	-fx-border-color: #6fa6ff;
+	-fx-border-width: 1;
+	-fx-cursor: hand;
+}
+
+.undo-button:hover,
+.clear-game-button:hover {
+	-fx-background-color: linear-gradient(to bottom, #63a1ff, #4a84e5);
+}
+
+.undo-button:pressed,
+.clear-game-button:pressed {
+	-fx-background-color: linear-gradient(to bottom, #3d7de7, #336ccb);
+	-fx-translate-y: 1;
+}
