@@ -10,26 +10,31 @@
 	-fx-padding: 0 1 0 1;
 }
 
-.manager-controls-panel {
+.manager-controls-panel,
+.manager-controls-panel-split,
+.scoreboard-panel,
+.scoreboard-panel-split {
 	-fx-background-color: transparent;
 }
 
-.manager-controls-panel-split {
-	-fx-background-color: transparent;
-}
 
-.manager-controls-panel-split > .split-pane-divider {
+.manager-controls-panel-split > .split-pane-divider,
+.scoreboard-panel-split > .split-pane-divider {
 	-fx-background-color: #1d2735;
 	-fx-border-color: #29384d;
 	-fx-border-width: 1 0 1 0;
 	-fx-padding: 1 0 1 0;
 }
 
-.manager-controls-panel-split > .content {
+
+.manager-controls-panel-split > .content,
+.scoreboard-panel-split > .content {
 	-fx-background-color: #0f1520;
 }
 
-.home-controls-panel {
+
+.home-controls-panel,
+.scoreboard-preview-panel {
 	-fx-background-color: #141e2d;
 	-fx-background-radius: 14;
 	-fx-border-radius: 14;
@@ -38,7 +43,9 @@
 	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.30), 14, 0.18, 0, 3);
 }
 
-.away-controls-panel {
+
+.away-controls-panel,
+.game-control-panel {
 	-fx-background-color: #131c2a;
 	-fx-background-radius: 14;
 	-fx-border-radius: 14;
@@ -149,34 +156,6 @@
 	-fx-effect: dropshadow(gaussian, rgba(123,175,255,0.26), 8, 0.22, 0, 0);
 }
 
-.scoreboard-panel {
-	-fx-background-color: transparent;
-}
-
-.scoreboard-panel-split {
-	-fx-background-color: transparent;
-}
-
-.scoreboard-panel-split > .split-pane-divider {
-	-fx-background-color: #1d2735;
-	-fx-border-color: #29384d;
-	-fx-border-width: 1 0 1 0;
-	-fx-padding: 1 0 1 0;
-}
-
-.scoreboard-panel-split > .content {
-	-fx-background-color: #0f1520;
-}
-
-.scoreboard-preview-panel {
-	-fx-background-color: #141e2d;
-	-fx-background-radius: 14;
-	-fx-border-radius: 14;
-	-fx-border-color: #2f3d52;
-	-fx-border-width: 1;
-	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.30), 14, 0.18, 0, 3);
-}
-
 .scoreboard-preview-panel .label {
 	-fx-text-fill: #cfd9ee;
 	-fx-font-family: "Bahnschrift";
@@ -216,15 +195,6 @@
 	-fx-text-fill: #f6f9ff;
 	-fx-font-size: 18px;
 	-fx-font-weight: 700;
-}
-
-.game-control-panel {
-	-fx-background-color: #131c2a;
-	-fx-background-radius: 14;
-	-fx-border-radius: 14;
-	-fx-border-color: #2c3a4e;
-	-fx-border-width: 1;
-	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.30), 14, 0.18, 0, 3);
 }
 
 .undo-button,
