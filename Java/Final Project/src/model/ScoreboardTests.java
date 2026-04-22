@@ -2,21 +2,6 @@ package model;
 
 public class ScoreboardTests {
 
-    // some of my model's methods throw errors, so this will make sure an error is thrown properly etc.
-    private static void assertThrows(Class<? extends Throwable> expected, Runnable action, String message) {
-        try {
-            action.run();
-            throw new AssertionError(message + " - expected " + expected.getSimpleName());
-        } catch (Throwable actual) {
-            if (!expected.isInstance(actual)) {
-                throw new AssertionError(
-                    message + " - expected " + expected.getSimpleName()
-                    + ", but got " + actual.getClass().getSimpleName()
-                );
-            }
-        }
-    }
-
     public static void main(String[] args) {
         try {
             Team home = new Team();
@@ -27,15 +12,21 @@ public class ScoreboardTests {
             assert scoreManager.displayLastAction().equals("None")
                 : "Initial last action should be None";
 
-            assertThrows(IllegalStateException.class,
-                () -> scoreManager.updateHomeScore(6, "Touchdown"),
-                "Scoring before team names are set should fail"
-            );
+            boolean blockedHomeScore = false;
+            try {
+                scoreManager.updateHomeScore(6, "Touchdown");
+            } catch (IllegalStateException e) {
+                blockedHomeScore = true;
+            }
+            assert blockedHomeScore : "Scoring before team names are set should fail";
 
-            assertThrows(IllegalStateException.class,
-                () -> scoreManager.undo(),
-                "Undo before any scoring action should fail"
-            );
+            boolean blockedUndo = false;
+            try {
+                scoreManager.undo();
+            } catch (IllegalStateException e) {
+                blockedUndo = true;
+            }
+            assert blockedUndo : "Undo before any scoring action should fail";
 
             teamManager.setHomeTeamName("Aggies");
             teamManager.setAwayTeamName("Gamecocks");
@@ -66,10 +57,14 @@ public class ScoreboardTests {
             assert scoreManager.displayLastAction().equals("None")
                 : "Clear should reset last action to None";
 
-            assertThrows(IllegalStateException.class,
-                () -> scoreManager.undo(),
-                "Undo after clear should fail when last action is null"
-            );
+            boolean blockedUndoAfterClear = false;
+            try {
+                scoreManager.undo();
+            } catch (IllegalStateException e) {
+                blockedUndoAfterClear = true;
+            }
+            assert blockedUndoAfterClear
+                : "Undo after clear should fail when last action is null";
 
             System.out.println("All tests PASS");
         } catch (Throwable t) {
