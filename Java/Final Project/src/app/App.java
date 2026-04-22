@@ -14,7 +14,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // Shared model state for both windows
+
         Team home = new Team();
         Team away = new Team();
         TeamManager teamManager = new TeamManager(home, away);
@@ -24,7 +24,6 @@ public class App extends Application {
         Scene displayScene = new Scene(displayLoader.load());
         DisplayController displayController = displayLoader.getController();
 
-        // Load manager
         FXMLLoader managerLoader = new FXMLLoader(getClass().getResource("/view/scoreboardmanager.fxml"));
         Scene managerScene = new Scene(managerLoader.load());
         ScoreboardController managerController = managerLoader.getController();
