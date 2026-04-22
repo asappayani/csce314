@@ -3,7 +3,6 @@
 	-fx-font-family: "Bahnschrift";
 }
 
-.scoreboard-display-split,
 .home-team-info-pane,
 .game-info-pane,
 .away-team-info-pane {
@@ -38,15 +37,9 @@
 	-fx-font-weight: 800;
 }
 
-.home-team-score-badge,
-.away-team-score-badge {
-	-fx-background-color: #202d40;
-	-fx-border-color: #33425a;
-	-fx-border-width: 3;
-	-fx-background-radius: 0;
-	-fx-border-radius: 0;
-}
 
+.home-team-score-badge,
+.away-team-score-badge,
 .game-time-badge,
 .last-action-badge {
 	-fx-background-color: #202d40;

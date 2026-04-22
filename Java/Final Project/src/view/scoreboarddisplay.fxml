@@ -28,7 +28,7 @@
                      <children>
                         <StackPane alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="top-strip">
                            <children>
-                              <Label alignment="CENTER" styleClass="home-team-name" text="HOME TEAM NAME" />
+                              <Label fx:id="homeTeamLabel" alignment="CENTER" styleClass="home-team-name" text="HOME TEAM NAME" />
                            </children>
                         </StackPane>
                         <StackPane alignment="CENTER" GridPane.rowIndex="2">
@@ -58,7 +58,7 @@
                      <children>
                         <StackPane alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="top-strip">
                            <children>
-                              <Label alignment="CENTER" styleClass="current-game-quarter" text="QUARTER" />
+                              <Label fx:id="currentQuarterLabel" alignment="CENTER" styleClass="current-game-quarter" text="1ST QUARTER" />
                            </children>
                         </StackPane>
                         <VBox alignment="CENTER" spacing="22.0" GridPane.rowIndex="2">
@@ -70,7 +70,7 @@
                               </StackPane>
                               <StackPane alignment="CENTER" maxHeight="60.0" maxWidth="230.0" minHeight="60.0" minWidth="230.0" prefHeight="60.0" prefWidth="230.0" styleClass="last-action-badge">
                                  <children>
-                                    <Label alignment="CENTER" styleClass="last-action" text="LAST ACTION" />
+                                    <Label fx:id="lastActionLabel" alignment="CENTER" styleClass="last-action" text="LAST ACTION" />
                                  </children>
                               </StackPane>
                            </children>
@@ -93,7 +93,7 @@
                      <children>
                         <StackPane alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="top-strip">
                            <children>
-                              <Label alignment="CENTER" styleClass="away-team-name" text="AWAY TEAM NAME" />
+                              <Label fx:id="awayTeamLabel" alignment="CENTER" styleClass="away-team-name" text="AWAY TEAM NAME" />
                            </children>
                         </StackPane>
                         <StackPane alignment="CENTER" GridPane.rowIndex="2">
