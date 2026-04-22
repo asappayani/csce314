@@ -56,6 +56,7 @@ public class ScoreManager {
         if (lastTeam == null) throw new IllegalStateException("There is no previous action to undo.");
         
         lastTeam.updateScore(-lastScoreChange);
+        lastTeam = null;
     }
 
     public void clear(){

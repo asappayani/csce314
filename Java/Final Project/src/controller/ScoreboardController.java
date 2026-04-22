@@ -138,13 +138,13 @@ public class ScoreboardController {
 
     @FXML
     void setAwayName(ActionEvent event) {
-        teamManager.setAwayTeamName(awayNameField.getText());
+        runAction(() -> teamManager.setAwayTeamName(awayNameField.getText()));
         refreshFromModel();
     }
 
     @FXML
     void setHomeName(ActionEvent event) {
-        teamManager.setHomeTeamName(homeNameField.getText());
+        runAction(() -> teamManager.setHomeTeamName(homeNameField.getText()));
         refreshFromModel();
     }
 
