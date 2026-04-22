@@ -22,9 +22,9 @@ Lastly, the controller directory holds the two controllers needed to connect the
 
 
 How to build/run the app:
-Open build-run.ps1 located in the root directory.
-Update the $javafx variable so that it is the path to YOUR javafx library
-While in the root directory, run the powershell command with "./build-run.ps1"
+1. Open build-run.ps1 located in the root directory.
+2. Update the $javafx variable so that it is the path to YOUR javafx library
+3. While in the root directory of the project, type "./build-run.ps1" into the terminal to run the powershell command.
 
 
 
