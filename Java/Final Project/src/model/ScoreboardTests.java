@@ -48,8 +48,8 @@ public class ScoreboardTests {
 
             scoreManager.undo();
             assert away.getScore() == 0 : "Undo should revert the away score";
-            assert scoreManager.displayLastAction().equals("Gamecocks +3 (Field Goal)")
-                : "Undo should not erase the last action text";
+            assert scoreManager.displayLastAction().equals("None")
+                : "Undo should reset last action to None";
 
             scoreManager.clear();
             assert home.getScore() == 0 : "Home score should be cleared";
